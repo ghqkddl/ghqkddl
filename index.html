@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8"><title>Journal of ghqkddl</title>
     <style>
-      body{background-image:url( paper.jpeg);}
       .A{border-bottom:2px solid gray; padding:5px;margin:0px; margin-left: auto; margin-right: auto; width:69.5%}
       .fruit{float: left;padding-left: 4px; width: 60px;padding-top:10px}
       .switch_on_off{float: right;padding-right: 4px; width:60px; padding-top:10px}
@@ -11,9 +10,12 @@
       h1{text-align:center; font-style:italic; font-family:Century schoolbook, cursive; font-size: 60px
       ;margin:0px}
       h2{margin: 0px; text-align: center; font-family:Century schoolbook, cursive; font-size: 25px; border-bottom:1px solid gray; margin-left: auto; margin-right: auto; width: 70% }
-      .main_img{display: block; margin-left: auto; margin-right: auto; width: 65%;padding:20px;}
-      #bienvenue{text-align:center; font-size:60px; font-family:comic sans MS, cursive; color:#a0787c;}
-      @media(max-width:1021px){h1{font-size:25px}.A img{width:30px} h2{font-size:18px}}
+      .main_img{display: block; margin-left: auto; margin-right: auto ;padding:20px;}
+      @media(max-width:1021px){h1{font-size:25px}.A img{width:30px; padding-top:0px} h2{font-size:18px}}
+      .music_png{position: fixed; left:40px;}
+      .discuss_png{position: fixed; right:40px;}
+      .photo_png{position: fixed; left:40px; top:280px}
+      .question_png{position: fixed; right:40px; top:280px}
     </style>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -29,18 +31,41 @@
   </head>
   <body>
     <div class="A">
-    <img class="fruit" src="fruit.png" onclick="alert('what makes you fancy is just that orange')">
-    <img class="switch_on_off" src="off.png" alt= off onclick="
-    if(this.alt === 'off')
-    {this.src = 'switch.png'; alert('orange mode!!'); this.alt = 'on'}
-    else {this.src = 'off.png'; this.alt = 'off'}
-    ">
-    <h1><a href="index.html">ghqkddl-ho_bang_</a></h1>
-
+      <img class="fruit" src="fruit.png" onclick="alert('what makes you fancy is just that orange')">
+      <img class="switch_on_off" src="off.png" alt= off onclick="
+      if(this.alt === 'off')
+      {this.src = 'switch.png'; alert('orange mode!!'); this.alt = 'on';
+      document.querySelector('.fruit').src = 'cool.png';
+      document.querySelector('body').style.backgroundColor='orange';
+      document.querySelector('a').style.color='red';
+      document.querySelector('.C').style.display='none';
+      document.querySelector('.D').style.display='block';
+      document.querySelector('.music_png').style.display='inline';
+      document.querySelector('.discuss_png').style.display='inline';
+      document.querySelector('.photo_png').style.display='inline';
+      document.querySelector('.question_png').style.display='inline'}
+      else {this.src = 'off.png'; this.alt = 'off';
+      document.querySelector('.fruit').src = 'fruit.png';
+      document.querySelector('body').style.backgroundColor='white';
+      document.querySelector('a').style.color='black';
+      document.querySelector('.C').style.display='block';
+      document.querySelector('.D').style.display='none';
+      document.querySelector('.music_png').style.display='none';
+      document.querySelector('.discuss_png').style.display='none ';
+      document.querySelector('.photo_png').style.display='none';
+      document.querySelector('.question_png').style.display='none'}
+      ">
+      <h1><a href="index.html">ghqkddl-ho_bang_</a></h1>
     </div>
-    <h2>Journal of ghqkddl: i hope you became the best version of yourself</h2>
-    <h3 id="bienvenue"><a href="1.html" class="bienvenue" >BIENVENUE</a></h3>
-    <img class="main_img" src="1.jpg" width="75%" alt="사요나라">
+    <h2 class="C" style="display: block">Journal of ghqkddl: i hope you became the best version of yourself</h2>
+    <h2 class="D" style="display: none; color: red">Journal of ghqkddl: what makes you fancy is just that orange</h2>
+      <a href="music.html"><img class="music_png" src="music.png" style="display:none" width=7%></a>
+      <a href="discuss.html"><img class="discuss_png" src="discuss.png" style="display:none" width=7%></a>
+      <a href="photo.html"><img class="photo_png" src="photo.png" style="display:none" width=7%></a>
+      <a href="question.html"><img class="question_png" src="question.png" style="display:none" width=7%></a>
+      <a href="1.html"><img class="main_img" src="1.jpg" width="75%" alt="사요나라"></a>
+    </div>
+
 
 
 
